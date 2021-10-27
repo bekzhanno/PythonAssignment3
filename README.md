@@ -17,17 +17,18 @@ flask - https://flask.palletsprojects.com/en/2.0.x/
 ```
 ## Usage
 ```bash
-from pycoingecko import CoinGeckoAPI
-cg = CoinGeckoAPI()
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgre@localhost/users'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = 'thisismyflasksecretkey'
 ```
 ## Examples
+Outputs will be like these:
 ```bash
-Enter for filtering top N cryptocurrencies by market capitalization:  5
-1 . Bitcoin $ 839127547557 ***price: $ 44578
-2 . Ethereum $ 368963169304 ***price: $ 3155.16
-3 . Cardano $ 72755846963 ***price: $ 2.28
-4 . Tether $ 69716501411 ***price: $ 1.01
-5 . Binance Coin $ 58596665490 ***price: $ 383.09
+Could not find user with a login : {{data}}
+Hello, token which is provided is correct 
+Could not verify token
+Token : {{data}}
 ```
+Our tokens saved in database
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
